@@ -1,0 +1,600 @@
+:root {
+    --main-color: #89a4f3;
+    --section-color: #fff;
+    --textmain-color: #000;
+    --logo-color: rgb(98, 98, 99);
+    --btn-color: rgb(15, 12, 53);
+    --btn-color-hover: #fff;
+    --section-shadow: rgb(199, 199, 199);
+}
+
+.dark-mode {
+    --main-color: #0a012b;
+    --section-color: rgb(10, 10, 59);
+    --textmain-color: #fff;
+    --logo-color: #fff;
+    --btn-color: rgb(255, 255, 255);
+    --btn-color-hover: rgb(18, 5, 201);
+    --section-shadow: rgb(25, 19, 109);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li,
+a,
+.contact1 {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--textmain-color);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    height: 15%;
+    background: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    box-shadow: 2px 2px 5px rgba(53, 52, 52, 0.2);
+}
+
+.kanan_nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.theme {
+    margin-left: 10px;
+
+}
+
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    background-color: var(--logo-color);
+    border-radius: 40px;
+}
+
+.judul {
+    text-align: center;
+    color: var(--textmain-color);
+}
+
+.kiri_nav li {
+    display: inline-flex;
+    padding: 0px 10px;
+
+}
+
+.kiri_nav li a {
+    transition: all 0.3s ease 0s;
+}
+
+.active {
+    border-radius: 30px;
+    padding: 7.5px 15px;
+    background: var(--btn-color);
+    color: var(--main-color);
+}
+
+.kiri_nav li a:hover {
+    border-radius: 30px;
+    padding: 7.5px 15px;
+    background: var(--btn-color-hover);
+    color: var(--main-color);
+}
+
+
+.contact1 {
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: var(--btn-color);
+    color: var(--main-color);
+    transition: all 0.3 ease 0s;
+}
+
+.contact1:hover {
+    background: var(--btn-color-hover);
+    color: var(--textmain-color);
+}
+
+/* switch theme */
+
+.theme {
+    display: flex;
+    align-items: center;
+}
+
+#switch-theme {
+    position: absolute;
+    opacity: 0;
+
+}
+
+.color-switch {
+    width: 5em;
+    height: 2em;
+    border-radius: 10em;
+    background-color: var(--section-shadow);
+    border: 2px solid var(--btn-color-hover);
+    cursor: pointer;
+}
+
+
+.color-switch::before {
+    content: "Light On";
+    margin-top: 4px;
+    justify-content: center;
+    display: flex;
+
+}
+
+#switch-theme:checked~.color-switch::before {
+    content: "Dark On";
+}
+
+
+
+/* content */
+section {
+    background-color: var(--section-color);
+    color: var(--textmain-color);
+    display: flex;
+
+}
+
+/* section kiri */
+
+.kiri {
+    margin-left: 10px;
+    margin-right: 10px;
+    position: fixed;
+    left: 0;
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color: var(--main-color);
+    height: 12.5%;
+    width: 20%;
+}
+
+.kategori {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.list-kategori {
+    list-style: none;
+    height: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.kiri:hover {
+    height: auto;
+}
+
+.kiri:hover>.list-kategori {
+    visibility: visible;
+    height: 100%;
+    margin: 30px;
+}
+
+.kiri:hover>.kategori h2 span {
+    transform: rotate(90deg);
+    transition: 0.3s;
+    border-radius: 50%;
+    background-color: var(--btn-color);
+    color: var(--main-color);
+}
+
+.list-kategori ul li {
+    padding: 10px;
+}
+
+.list-kategori ul li a {
+    transition: 0.3s;
+}
+
+.list-kategori ul li a:hover {
+    border-radius: 30px;
+    padding: 7.5px 20px;
+    background: white;
+    color: var(--main-color);
+}
+/* section tengah */
+.tengah {
+    border-radius: 10px;
+    margin: 1%;
+    margin-right: 10px;
+    left: 20%;
+    height: 100%;
+    width: 57%;
+    background-color: var(--section-shadow);
+    position: relative;
+    text-align: center;
+    font-weight: 900;
+    padding: 20px;
+
+}
+
+.berita {
+    padding: 10px;
+    background-color: var(--section-color);
+    border-radius: 10px;
+    color: var(--textmain-color);
+    text-align: start;
+    margin-top: 10px;
+}
+
+.berita .tgl {
+    color: var(--textmain-color);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.berita .gambar {
+    width: 100%;
+
+}
+
+
+.berita .des {
+    margin: 15px;
+}
+
+/* section kanan */
+.kanan {
+    position: fixed;
+    right: 0;
+    margin: 30px 10px 0px 10px;
+    border-radius: 20px;
+    background: var(--main-color);
+    height: 550px;
+    width: 20%;
+    text-align: center;
+
+}
+
+.pencarian-pop {
+    margin: 10px;
+    background: white;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.pencarian-btn {
+    display: inline-flex;
+    color: var(--main-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.pencarian-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    color: var(--main-color);
+    font-size: 16px;
+    transition: 0.4s;
+    width: 0px;
+}
+
+.pencarian-pop:hover>.pencarian-txt {
+    width: 200px;
+    padding: 0 6px;
+}
+
+.pencarian-pop:hover>.pencarian-btn {
+    background: var(--main-color);
+    color: white;
+}
+
+.kanan h2 {
+    margin-bottom: 30px;
+}
+
+.kanan h4 {
+    margin-left: 5px;
+    text-align: start;
+    font-weight: normal;
+}
+
+
+.berita-pop {
+    height: 75%;
+    overflow-y: auto;
+}
+
+.berita-populer li {
+    margin: 5px;
+    background-color: white;
+    display: flex;
+}
+
+.image-berita {
+    width: 80%;
+    margin: 10px;
+}
+
+.berita-populer span {
+    background-color: var(--main-color);
+}
+
+.berita-populer h4 {
+    color: var(--main-color);
+}
+
+/* footer */
+.footer1 {
+    background-color: hsl(0, 0%, 69%);
+    position: relative;
+    top: -10px;
+    height: 100px;
+    text-align: center;
+    clear: both;
+}
+
+/* profile */
+.card {
+    margin: 20px 0px;
+    background-color: var(--main-color);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border-radius: 30px;
+}
+
+.img-profile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+.img {
+    margin-top: 20px;
+}
+
+.card h3 {
+    text-align: center;
+    color: var(--textmain-color);
+}
+
+
+/* TODO LIST */
+.wrapper {
+    margin: 150px auto;
+    max-width: 400px;
+    width: 100%;
+    background: var(--main-color);
+    border-radius: 5px;
+    padding: 25px;
+}
+
+.wrapper .sub-judul {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.wrapper .input-textfield {
+    display: flex;
+    height: 45px;
+    width: 100%;
+}
+
+.input-textfield input {
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-radius: 3px;
+    padding-left: 15px;
+}
+
+
+.input-textfield button {
+    width: 50px;
+    height: 100%;
+    border: none;
+    color: var(--btn-color-hover);
+    margin-left: 5px;
+    font-size: 21px;
+    outline: none;
+    background: var(--btn-color);
+    cursor: pointer;
+    border-radius: 3px;
+    opacity: 0.6;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-textfield button:hover,
+.keterangan button:hover {
+    background: #721ce3;
+}
+
+.input-textfield button.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper .todolist {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todolist li {
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+    margin-top: 8px;
+    background: var(--btn-color-hover);
+    border-radius: 3px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+}
+
+.todolist li .icon {
+    position: absolute;
+    right: 0px;
+    background: #e74c3c;
+    width: 45px;
+    text-align: center;
+    color: var(--textmain-color);
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+.wrapper .keterangan {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.keterangan button {
+    padding: 6px 10px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 5px;
+    background: #e60808;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.6;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.keterangan button.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper{
+  
+    max-width: 400px;
+    width: 100%;
+    margin: 120px auto;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  }
+  .wrapper header{
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .wrapper .inputField{
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    height: 45px;
+  }
+  .inputField input{
+    width: 85%;
+    height: 100%;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    padding-left: 15px;
+    transition: all 0.3s ease;
+  }
+  .inputField input:focus{
+    border-color: #8E49E8;
+  }
+  .inputField button{
+    width: 50px;
+    height: 100%;
+    border: none;
+    color: #fff;
+    margin-left: 5px;
+    font-size: 21px;
+    outline: none;
+    background: #03aaf7;
+    cursor: pointer;
+    border-radius: 3px;
+    opacity: 0.6;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  .inputField button:hover,
+  .footer button:hover{
+    background: #03aaf7;
+  }
+  .inputField button.active{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .wrapper .todoList{
+    max-height: 250px;
+    overflow-y: auto;
+  }
+  .todoList li{
+    position: relative;
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    margin-bottom: 8px;
+  
+    border-radius: 3px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+  }
+  .todoList li .icon{
+    position: absolute;
+    right: -45px;
+    background: #03aaf7;
+    width: 45px;
+    text-align: center;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .todoList li:hover .icon{
+    right: 0px;
+  }
+  .wrapper .footer{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
